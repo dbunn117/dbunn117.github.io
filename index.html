@@ -124,7 +124,7 @@
     padding: 9px 14px; border-radius: 10px; transition: .2s;
   }
   .contact a:hover { border-color: var(--accent); transform: translateY(-1px); }
-  .contact .ic { color: var(--accent); }
+  .contact .ic { color: var(--accent); display: inline-flex; align-items: center; }
 
   /* ---------- Metrics strip ---------- */
   .metrics {
@@ -148,7 +148,7 @@
     border: 1px solid var(--line); background: var(--card-2);
     padding: 8px 13px; border-radius: 999px;
   }
-  .cap-ic { font-size: .95rem; }
+  .cap-ic { display: inline-flex; align-items: center; color: var(--accent); }
 
   /* ---------- Projects ---------- */
   .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -309,7 +309,7 @@
       <a class="navlink" href="#projects">Projects</a>
       <a class="navlink" href="#skills">Stack</a>
       <a class="navlink" href="#education">Education</a>
-      <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle light/dark theme">🌙</button>
+      <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle light/dark theme"></button>
     </nav>
   </div>
 </div>
@@ -328,18 +328,18 @@
 
     <!-- WHAT I DO -->
     <div class="caps reveal">
-      <div class="cap"><span class="cap-ic">⚡</span> Finance Transformation</div>
-      <div class="cap"><span class="cap-ic">🤖</span> AI Workflow Automation</div>
-      <div class="cap"><span class="cap-ic">📈</span> Executive Reporting</div>
-      <div class="cap"><span class="cap-ic">🧩</span> Data Products for Investment Teams</div>
+      <div class="cap"><span class="cap-ic" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></span> Finance Transformation</div>
+      <div class="cap"><span class="cap-ic" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></span> AI Workflow Automation</div>
+      <div class="cap"><span class="cap-ic" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span> Executive Reporting</div>
+      <div class="cap"><span class="cap-ic" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span> Data Products for Investment Teams</div>
     </div>
 
     <div class="contact reveal">
-      <a href="mailto:davibunn@gmail.com"><span class="ic">✉</span> davibunn@gmail.com</a>
+      <a href="mailto:davibunn@gmail.com"><span class="ic" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span> davibunn@gmail.com</a>
       <a href="https://www.linkedin.com/in/davidkcbunn/" target="_blank" rel="noopener"><span class="ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span> LinkedIn</a>
-      <a href="tel:+14152180335"><span class="ic">☎</span> (415) 218-0335</a>
-      <span><span class="ic">📍</span> Foster City, CA</span>
-      <a href="#" id="pdfBtn"><span class="ic">⤓</span> Save as PDF</a>
+      <a href="tel:+14152180335"><span class="ic" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span> (415) 218-0335</a>
+      <span><span class="ic" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span> Foster City, CA</span>
+      <a href="#" id="pdfBtn"><span class="ic" aria-hidden="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></span> Save as PDF</a>
     </div>
 
     <!-- METRICS -->
@@ -518,21 +518,21 @@
     </div>
     <div class="edu-grid">
       <div class="edu reveal">
-        <div class="badge">🎓</div>
+        <div class="badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/><line x1="22" y1="10" x2="22" y2="15"/></svg></div>
         <div>
           <div class="t">BCom Honours, Accounting Sciences</div>
           <div class="s">University of Pretoria</div>
         </div>
       </div>
       <div class="edu reveal">
-        <div class="badge">📊</div>
+        <div class="badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="3" y1="20" x2="21" y2="20"/></svg></div>
         <div>
           <div class="t">BIDA™ — Business Intelligence &amp; Data Analyst</div>
           <div class="s">Corporate Finance Institute</div>
         </div>
       </div>
       <div class="edu reveal">
-        <div class="badge">✓</div>
+        <div class="badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></svg></div>
         <div>
           <div class="t">Licensed CPA — California <span style="color:var(--faint);font-weight:400">(Inactive)</span></div>
           <div class="s">CFA Program — Level I Completed</div>
@@ -556,7 +556,9 @@
   const btn = document.getElementById('themeBtn');
   const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
   setTheme(prefersLight ? 'light' : 'dark');
-  function setTheme(t){ root.setAttribute('data-theme', t); btn.textContent = t === 'dark' ? '🌙' : '☀️'; }
+  const moonIcon = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+  const sunIcon = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
+  function setTheme(t){ root.setAttribute('data-theme', t); btn.innerHTML = t === 'dark' ? moonIcon : sunIcon; }
   btn.addEventListener('click', () => setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
 
   // Save as PDF -> opens print dialog
