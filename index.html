@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>David Bunn — Strategic Finance &amp; AI-Driven Transformation</title>
+<meta name="description" content="David Bunn — Strategic Finance Leader with 9+ years across corporate finance, audit, and digital transformation. Building AI-powered workflows that automate reporting and drive insight." />
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="David Bunn — Strategic Finance &amp; AI-Driven Transformation" />
+<meta property="og:description" content="Strategic Finance Leader building AI-powered workflows that automate reporting and drive insight. 9+ years across corporate finance, audit, and digital transformation." />
+<meta property="og:type" content="profile" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+
+<style>
+  :root {
+    --bg: #0c0f17;
+    --bg-soft: #131826;
+    --card: #161c2c;
+    --card-2: #1b2233;
+    --line: #28324a;
+    --text: #e7ecf5;
+    --muted: #95a1b8;
+    --faint: #6c7891;
+    --accent: #6ea8fe;
+    --accent-2: #7ef0c8;
+    --accent-glow: rgba(110, 168, 254, 0.16);
+    --max: 920px;
+    --radius: 16px;
+    --shadow: 0 1px 0 rgba(255,255,255,0.03) inset, 0 18px 40px -22px rgba(0,0,0,0.8);
+  }
+
+  [data-theme="light"] {
+    --bg: #f4f6fb;
+    --bg-soft: #eaeef6;
+    --card: #ffffff;
+    --card-2: #f7f9fd;
+    --line: #e1e6f0;
+    --text: #1a2233;
+    --muted: #54607a;
+    --faint: #8b97ad;
+    --accent: #2f6bff;
+    --accent-2: #0b927a;
+    --accent-glow: rgba(47, 107, 255, 0.10);
+    --shadow: 0 1px 2px rgba(20,30,60,0.04), 0 18px 38px -26px rgba(30,50,90,0.35);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    background-image:
+      radial-gradient(900px 500px at 80% -10%, var(--accent-glow), transparent 60%),
+      radial-gradient(700px 400px at -10% 10%, rgba(126,240,200,0.07), transparent 55%);
+    background-attachment: fixed;
+    transition: background-color .35s ease, color .35s ease;
+  }
+
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 22px; }
+
+  /* ---------- Top bar ---------- */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(12px);
+    background: color-mix(in srgb, var(--bg) 78%, transparent);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-inner {
+    max-width: var(--max); margin: 0 auto; padding: 12px 22px;
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  }
+  .brand { font-family: "Fraunces", serif; font-weight: 600; font-size: 1.05rem; letter-spacing: .2px; }
+  .brand span { color: var(--accent); }
+  .nav { display: flex; gap: 4px; align-items: center; }
+  .nav a {
+    color: var(--muted); text-decoration: none; font-size: .86rem; font-weight: 500;
+    padding: 7px 11px; border-radius: 8px; transition: .2s;
+  }
+  .nav a:hover { color: var(--text); background: var(--card-2); }
+  .icon-btn {
+    display: inline-grid; place-items: center;
+    width: 38px; height: 38px; border-radius: 10px;
+    border: 1px solid var(--line); background: var(--card);
+    color: var(--text); cursor: pointer; transition: .2s; font-size: 1rem;
+  }
+  .icon-btn:hover { border-color: var(--accent); color: var(--accent); }
+  @media (max-width: 680px) { .nav .navlink { display: none; } }
+
+  /* ---------- Hero ---------- */
+  header.hero { padding: 64px 0 30px; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: "JetBrains Mono", monospace; font-size: .72rem; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--accent-2);
+    border: 1px solid var(--line); padding: 6px 12px; border-radius: 999px;
+    background: var(--card);
+  }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-2) 22%, transparent); }
+  h1.name {
+    font-family: "Fraunces", serif; font-weight: 600;
+    font-size: clamp(2.6rem, 7vw, 4.4rem); line-height: 1.02; letter-spacing: -1px;
+    margin: 20px 0 10px;
+  }
+  .role {
+    font-size: clamp(1.05rem, 2.4vw, 1.4rem); color: var(--muted); font-weight: 500;
+    max-width: 640px;
+  }
+  .role b { color: var(--text); font-weight: 600; }
+
+  .contact { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .contact a, .contact span {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: .9rem; color: var(--text); text-decoration: none;
+    border: 1px solid var(--line); background: var(--card);
+    padding: 9px 14px; border-radius: 10px; transition: .2s;
+  }
+  .contact a:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .contact .ic { color: var(--accent); }
+
+  /* ---------- Metrics strip ---------- */
+  .metrics {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 40px 0 8px;
+  }
+  .metric {
+    background: linear-gradient(180deg, var(--card), var(--card-2));
+    border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 18px 16px; box-shadow: var(--shadow);
+  }
+  .metric .num { font-family: "Fraunces", serif; font-size: clamp(1.5rem, 3.4vw, 2.1rem); font-weight: 600; color: var(--text); line-height: 1; }
+  .metric .num em { font-style: normal; color: var(--accent); }
+  .metric .lbl { font-size: .78rem; color: var(--muted); margin-top: 8px; line-height: 1.35; }
+  @media (max-width: 680px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
+
+  /* ---------- Sections ---------- */
+  section { padding: 46px 0 6px; }
+  .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 26px; }
+  .sec-head h2 {
+    font-family: "Fraunces", serif; font-weight: 600; font-size: 1.5rem; letter-spacing: -.3px;
+  }
+  .sec-head .rule { flex: 1; height: 1px; background: linear-gradient(90deg, var(--line), transparent); }
+  .sec-num { font-family: "JetBrains Mono", monospace; font-size: .8rem; color: var(--faint); }
+
+  /* ---------- Experience ---------- */
+  .job {
+    position: relative;
+    border: 1px solid var(--line); background: var(--card);
+    border-radius: var(--radius); padding: 24px 24px 8px; margin-bottom: 18px;
+    box-shadow: var(--shadow); transition: border-color .25s, transform .25s;
+  }
+  .job:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+  .job-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 18px; align-items: baseline; }
+  .job-co { font-size: 1.18rem; font-weight: 700; letter-spacing: -.2px; }
+  .job-loc { font-size: .82rem; color: var(--faint); }
+  .roles { margin-top: 4px; }
+  .role-block { padding: 16px 0; border-top: 1px dashed var(--line); }
+  .role-block:first-child { border-top: none; padding-top: 10px; }
+  .role-line { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; align-items: baseline; margin-bottom: 12px; }
+  .role-title { font-weight: 600; color: var(--accent); font-size: .98rem; }
+  .role-date { font-family: "JetBrains Mono", monospace; font-size: .76rem; color: var(--muted); white-space: nowrap; }
+  ul.bullets { list-style: none; display: grid; gap: 11px; }
+  ul.bullets li { position: relative; padding-left: 22px; font-size: .93rem; color: var(--text); }
+  ul.bullets li::before {
+    content: ""; position: absolute; left: 2px; top: .62em;
+    width: 7px; height: 7px; border-radius: 2px; transform: rotate(45deg);
+    background: var(--accent); opacity: .8;
+  }
+  ul.bullets li b { color: var(--text); font-weight: 700; }
+  .tag-strong { color: var(--accent-2); font-weight: 600; }
+
+  /* ---------- Skills ---------- */
+  .skill-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 680px) { .skill-grid { grid-template-columns: 1fr; } }
+  .skill-card { border: 1px solid var(--line); background: var(--card); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow); }
+  .skill-card h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 14px; font-weight: 600; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    font-size: .82rem; padding: 6px 12px; border-radius: 8px;
+    background: var(--card-2); border: 1px solid var(--line); color: var(--text);
+    font-family: "JetBrains Mono", monospace;
+  }
+  .chip.hl { border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); color: var(--accent); }
+
+  /* ---------- Education ---------- */
+  .edu-grid { display: grid; gap: 14px; }
+  .edu {
+    display: flex; gap: 16px; align-items: flex-start;
+    border: 1px solid var(--line); background: var(--card); border-radius: var(--radius);
+    padding: 18px 20px; box-shadow: var(--shadow);
+  }
+  .edu .badge {
+    flex: none; width: 42px; height: 42px; border-radius: 11px;
+    display: grid; place-items: center; font-size: 1.1rem;
+    background: var(--card-2); border: 1px solid var(--line); color: var(--accent);
+  }
+  .edu .t { font-weight: 600; font-size: .98rem; }
+  .edu .s { font-size: .86rem; color: var(--muted); margin-top: 2px; }
+
+  /* ---------- Footer ---------- */
+  footer { padding: 56px 0 70px; text-align: center; color: var(--faint); }
+  .cta {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: linear-gradient(135deg, var(--accent), color-mix(in srgb, var(--accent) 60%, var(--accent-2)));
+    color: #fff; text-decoration: none; font-weight: 600; font-size: .95rem;
+    padding: 13px 22px; border-radius: 12px; margin-bottom: 26px;
+    box-shadow: 0 14px 30px -12px color-mix(in srgb, var(--accent) 70%, transparent);
+    transition: transform .2s;
+  }
+  [data-theme="light"] .cta { color: #fff; }
+  .cta:hover { transform: translateY(-2px); }
+  footer .fine { font-size: .8rem; margin-top: 10px; }
+  footer a { color: var(--muted); text-decoration: none; border-bottom: 1px solid var(--line); }
+  footer a:hover { color: var(--accent); }
+
+  /* ---------- Reveal animation ---------- */
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
+
+  /* ---------- Print ---------- */
+  @media print {
+    :root { --bg:#fff; --card:#fff; --card-2:#fff; --line:#ccc; --text:#000; --muted:#333; --faint:#555; --accent:#1a4fd6; --accent-2:#0a7a5f; }
+    body { background: #fff; }
+    .topbar, footer .cta, .icon-btn, .nav { display: none; }
+    .job, .skill-card, .edu, .metric { box-shadow: none; break-inside: avoid; }
+    .reveal { opacity: 1 !important; transform: none !important; }
+    body { font-size: 11px; line-height: 1.4; background-image: none; }
+    @page { margin: 12mm 14mm; }
+    section { padding: 12px 0 0; }
+    header.hero { padding: 0 0 4px; }
+    h1.name { font-size: 30px; margin: 6px 0 4px; }
+    .eyebrow { padding: 3px 9px; font-size: .62rem; }
+    .role { font-size: 12px; max-width: 100%; }
+    .contact { margin-top: 12px; gap: 7px; }
+    .contact a, .contact span { padding: 5px 9px; font-size: 10.5px; }
+    #pdfBtn { display: none; }
+    .metrics { gap: 8px; margin: 16px 0 0; grid-template-columns: repeat(4,1fr); }
+    .metric { padding: 10px; }
+    .metric .num { font-size: 18px; }
+    .metric .lbl { font-size: 8.5px; margin-top: 4px; }
+    .sec-head { margin-bottom: 12px; }
+    .sec-head h2 { font-size: 17px; }
+    .job { padding: 12px 14px 4px; margin-bottom: 10px; }
+    .job-co { font-size: 14px; }
+    .role-block { padding: 9px 0; }
+    .role-block:first-child { padding-top: 4px; }
+    .role-line { margin-bottom: 7px; }
+    ul.bullets { gap: 6px; }
+    ul.bullets li { font-size: 10.5px; padding-left: 18px; }
+    .skill-card, .edu { padding: 12px 14px; }
+    .edu-grid, .skill-grid { gap: 8px; }
+    .edu .badge { width: 34px; height: 34px; }
+    a { color: #000; }
+  }
+</style>
+</head>
+<body data-theme="dark">
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">David <span>Bunn</span></div>
+    <nav class="nav">
+      <a class="navlink" href="#experience">Experience</a>
+      <a class="navlink" href="#skills">Stack</a>
+      <a class="navlink" href="#education">Education</a>
+      <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle light/dark theme">🌙</button>
+    </nav>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <span class="eyebrow reveal"><span class="dot"></span> Strategic Finance × AI Transformation</span>
+    <h1 class="name reveal">David Bunn</h1>
+    <p class="role reveal">
+      <b>Strategic Finance Leader</b> with 9+ years across corporate finance, audit, and digital transformation —
+      operating at the intersection of <b>financial rigor</b> and <b>AI-powered execution</b>.
+    </p>
+    <div class="contact reveal">
+      <a href="mailto:davibunn@gmail.com"><span class="ic">✉</span> davibunn@gmail.com</a>
+      <a href="https://www.linkedin.com/in/davidkcbunn/" target="_blank" rel="noopener"><span class="ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span> LinkedIn</a>
+      <a href="tel:+14152180335"><span class="ic">☎</span> (415) 218-0335</a>
+      <span><span class="ic">📍</span> Foster City, CA</span>
+      <a href="#" id="pdfBtn"><span class="ic">⤓</span> Save as PDF</a>
+    </div>
+
+    <!-- METRICS -->
+    <div class="metrics">
+      <div class="metric reveal"><div class="num"><em>80%</em></div><div class="lbl">Less manual data-extraction time via AI workflows</div></div>
+      <div class="metric reveal"><div class="num"><em>$120M</em></div><div class="lbl">Series A round supported, end-to-end diligence</div></div>
+      <div class="metric reveal"><div class="num"><em>$25B+</em></div><div class="lbl">Market-cap client led on US GAAP integrated audit</div></div>
+      <div class="metric reveal"><div class="num"><em>35+</em></div><div class="lbl">Funds owned for revenue &amp; fee modeling</div></div>
+    </div>
+  </header>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="sec-head reveal">
+      <span class="sec-num">01</span>
+      <h2>Professional Experience</h2>
+      <span class="rule"></span>
+    </div>
+
+    <article class="job reveal">
+      <div class="job-top">
+        <div class="job-co">Stockbridge Capital Group</div>
+        <div class="job-loc">San Francisco, CA</div>
+      </div>
+      <div class="roles">
+        <div class="role-block">
+          <div class="role-line">
+            <span class="role-title">Data &amp; Innovation Associate — CTO Team</span>
+            <span class="role-date">Jan 2026 — Present</span>
+          </div>
+          <ul class="bullets">
+            <li><b>AI-Powered Workflows:</b> Built an AI Resource Hub and automated reporting workflows with Claude Code and Copilot Studio, cutting manual data-extraction time by <span class="tag-strong">80%</span> for capital-markets teams.</li>
+            <li><b>Zero-to-One Market Diligence:</b> Developed a Market Selection Tool leveraging macro-economic data and LLMs, giving investment teams instant competitive assessments and strategic roadmaps for new acquisitions.</li>
+            <li><b>Geospatial Dashboards:</b> Built a dynamic, interactive Asset Map Dashboard plotting all owned assets across markets — teams drill into asset-manager and tenant detail and resize market bubbles on the fly by square footage, rent PSF, and more.</li>
+            <li><b>Strategic Coordination:</b> Key contact for the Acquisitions AI project, managing 3rd-party vendors and internal business users across data cleansing and front-end app development.</li>
+          </ul>
+        </div>
+        <div class="role-block">
+          <div class="role-line">
+            <span class="role-title">Finance Associate</span>
+            <span class="role-date">May 2023 — Dec 2025</span>
+          </div>
+          <ul class="bullets">
+            <li><b>Revenue &amp; Fee Modeling:</b> Owned complex revenue projections for <span class="tag-strong">35+ funds</span> plus corporate expense forecasting — the "source of truth" for the CFO and Executive Committee.</li>
+            <li><b>Data Architecture:</b> Redesigned end-to-end financial reporting flows — from source systems to board-ready presentations — using Power Query and AI tools to improve speed and accuracy.</li>
+            <li><b>Executive Communication:</b> Prepared review materials for the Executive Committee and external shareholder meetings, distilling complex models into clear strategic narratives.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="job reveal">
+      <div class="job-top">
+        <div class="job-co">Major League Cricket</div>
+        <div class="job-loc">San Francisco, CA</div>
+      </div>
+      <div class="roles">
+        <div class="role-block">
+          <div class="role-line">
+            <span class="role-title">Senior Finance Manager</span>
+            <span class="role-date">May 2021 — Apr 2023</span>
+          </div>
+          <ul class="bullets">
+            <li><b>Strategic Finance &amp; Diligence:</b> Helped execute a <span class="tag-strong">$120M Series A</span> round; led 10-year cash-flow forecasting and group financial-statement preparation across 12 entities.</li>
+            <li><b>Operational Execution:</b> Scaled the finance function from the ground up, implementing company-wide procurement and approval frameworks through a period of high growth and ambiguity.</li>
+            <li><b>Investor Relations:</b> Delivered financial data and written strategic commentary for investor reporting packages.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="job reveal">
+      <div class="job-top">
+        <div class="job-co">PricewaterhouseCoopers</div>
+        <div class="job-loc">San Francisco &amp; Johannesburg</div>
+      </div>
+      <div class="roles">
+        <div class="role-block">
+          <div class="role-line">
+            <span class="role-title">Manager / Senior Associate</span>
+            <span class="role-date">Jan 2016 — Apr 2021</span>
+          </div>
+          <ul class="bullets">
+            <li><b>Analytical Rigor:</b> Led US GAAP integrated audits for a <span class="tag-strong">$25B+ market-cap</span> ecommerce client; managed multi-disciplinary teams across IT, valuations, and tax.</li>
+            <li><b>Project Management:</b> Consistently rated <span class="tag-strong">Tier 1 ("Exceeds Expectations")</span> for managing complex audit phases, budgets, and reporting directly to CAOs.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="sec-head reveal">
+      <span class="sec-num">02</span>
+      <h2>Technical Stack</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-card reveal">
+        <h3>AI &amp; Automation</h3>
+        <div class="chips">
+          <span class="chip hl">Claude Code</span>
+          <span class="chip hl">ChatGPT</span>
+          <span class="chip hl">Codex</span>
+          <span class="chip hl">Gemini</span>
+          <span class="chip hl">Copilot Studio</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Data &amp; Analytics</h3>
+        <div class="chips">
+          <span class="chip">SQL</span>
+          <span class="chip">Power BI (DAX)</span>
+          <span class="chip">Power Query</span>
+          <span class="chip">Python 3</span>
+          <span class="chip">VBA</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Systems &amp; ERP</h3>
+        <div class="chips">
+          <span class="chip">NetSuite</span>
+          <span class="chip">Workday</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <h3>Domain</h3>
+        <div class="chips">
+          <span class="chip">Corporate Finance</span>
+          <span class="chip">FP&amp;A</span>
+          <span class="chip">US GAAP Audit</span>
+          <span class="chip">Investor Relations</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="sec-head reveal">
+      <span class="sec-num">03</span>
+      <h2>Education &amp; Certifications</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="edu-grid">
+      <div class="edu reveal">
+        <div class="badge">🎓</div>
+        <div>
+          <div class="t">BCom Honours, Accounting Sciences</div>
+          <div class="s">University of Pretoria</div>
+        </div>
+      </div>
+      <div class="edu reveal">
+        <div class="badge">📊</div>
+        <div>
+          <div class="t">BIDA™ — Business Intelligence &amp; Data Analyst</div>
+          <div class="s">Corporate Finance Institute</div>
+        </div>
+      </div>
+      <div class="edu reveal">
+        <div class="badge">✓</div>
+        <div>
+          <div class="t">Licensed CPA — California <span style="color:var(--faint);font-weight:400">(Inactive)</span></div>
+          <div class="s">CFA Program — Level I Completed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <a class="cta" href="mailto:davibunn@gmail.com">Let's talk →</a>
+  <div class="fine">
+    <a href="mailto:davibunn@gmail.com">davibunn@gmail.com</a> · <a href="https://www.linkedin.com/in/davidkcbunn/" target="_blank" rel="noopener">LinkedIn</a> · (415) 218-0335
+  </div>
+</footer>
+
+<script>
+  // Theme toggle (respects system + remembers choice via in-memory flag)
+  const root = document.body;
+  const btn = document.getElementById('themeBtn');
+  const prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+  setTheme(prefersLight ? 'light' : 'dark');
+  function setTheme(t){ root.setAttribute('data-theme', t); btn.textContent = t === 'dark' ? '🌙' : '☀️'; }
+  btn.addEventListener('click', () => setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'));
+
+  // Save as PDF -> opens print dialog
+  document.getElementById('pdfBtn').addEventListener('click', e => { e.preventDefault(); window.print(); });
+
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => { if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach((el, i) => { el.style.transitionDelay = (i % 5 * 60) + 'ms'; io.observe(el); });
+</script>
+</body>
+</html>
