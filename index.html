@@ -140,6 +140,33 @@
   .metric .lbl { font-size: .78rem; color: var(--muted); margin-top: 8px; line-height: 1.35; }
   @media (max-width: 680px) { .metrics { grid-template-columns: repeat(2, 1fr); } }
 
+  /* ---------- What I do ---------- */
+  .caps { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 24px; }
+  .cap {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: .86rem; font-weight: 500; color: var(--text);
+    border: 1px solid var(--line); background: var(--card-2);
+    padding: 8px 13px; border-radius: 999px;
+  }
+  .cap-ic { font-size: .95rem; }
+
+  /* ---------- Projects ---------- */
+  .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 680px) { .proj-grid { grid-template-columns: 1fr; } }
+  .proj {
+    border: 1px solid var(--line); background: var(--card); border-radius: var(--radius);
+    padding: 22px; box-shadow: var(--shadow); transition: border-color .25s, transform .25s;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .proj:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); transform: translateY(-2px); }
+  .proj-top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 4px 12px; }
+  .proj-top h3 { font-size: 1.04rem; font-weight: 700; letter-spacing: -.2px; }
+  .proj-impact {
+    font-family: "JetBrains Mono", monospace; font-size: .68rem; letter-spacing: .3px;
+    color: var(--accent-2); border: 1px solid var(--line); padding: 3px 9px; border-radius: 999px; white-space: nowrap;
+  }
+  .proj p { font-size: .9rem; color: var(--muted); flex: 1; }
+
   /* ---------- Sections ---------- */
   section { padding: 46px 0 6px; }
   .sec-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 26px; }
@@ -232,28 +259,38 @@
     .topbar, footer .cta, .icon-btn, .nav { display: none; }
     .job, .skill-card, .edu, .metric { box-shadow: none; break-inside: avoid; }
     .reveal { opacity: 1 !important; transform: none !important; }
-    body { font-size: 11px; line-height: 1.4; background-image: none; }
-    @page { margin: 12mm 14mm; }
-    section { padding: 12px 0 0; }
-    header.hero { padding: 0 0 4px; }
-    h1.name { font-size: 30px; margin: 6px 0 4px; }
+    body { font-size: 10.5px; line-height: 1.35; background-image: none; }
+    @page { margin: 9mm 13mm; }
+    section { padding: 9px 0 0; }
+    header.hero { padding: 0 0 2px; }
+    h1.name { font-size: 27px; margin: 4px 0 3px; }
     .eyebrow { padding: 3px 9px; font-size: .62rem; }
     .role { font-size: 12px; max-width: 100%; }
     .contact { margin-top: 12px; gap: 7px; }
     .contact a, .contact span { padding: 5px 9px; font-size: 10.5px; }
     #pdfBtn { display: none; }
-    .metrics { gap: 8px; margin: 16px 0 0; grid-template-columns: repeat(4,1fr); }
-    .metric { padding: 10px; }
+    .caps { gap: 6px; margin-top: 12px; }
+    .cap { padding: 4px 9px; font-size: 9.5px; }
+    .cap-ic { display: none; }
+    .proj-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+    .proj { padding: 11px 13px; gap: 7px; }
+    .proj-top h3 { font-size: 11.5px; }
+    .proj-impact { font-size: 7.5px; padding: 2px 6px; }
+    .proj p { font-size: 9.5px; }
+    .chips { gap: 5px; }
+    .chip { font-size: 8px; padding: 3px 7px; }
+    .metrics { gap: 7px; margin: 11px 0 0; grid-template-columns: repeat(4,1fr); }
+    .metric { padding: 8px; }
     .metric .num { font-size: 18px; }
     .metric .lbl { font-size: 8.5px; margin-top: 4px; }
     .sec-head { margin-bottom: 12px; }
     .sec-head h2 { font-size: 17px; }
-    .job { padding: 12px 14px 4px; margin-bottom: 10px; }
-    .job-co { font-size: 14px; }
-    .role-block { padding: 9px 0; }
-    .role-block:first-child { padding-top: 4px; }
-    .role-line { margin-bottom: 7px; }
-    ul.bullets { gap: 6px; }
+    .job { padding: 10px 13px 3px; margin-bottom: 8px; }
+    .job-co { font-size: 13.5px; }
+    .role-block { padding: 7px 0; }
+    .role-block:first-child { padding-top: 3px; }
+    .role-line { margin-bottom: 6px; }
+    ul.bullets { gap: 5px; }
     ul.bullets li { font-size: 10.5px; padding-left: 18px; }
     .skill-card, .edu { padding: 12px 14px; }
     .edu-grid, .skill-grid { gap: 8px; }
@@ -269,6 +306,7 @@
     <div class="brand">David <span>Bunn</span></div>
     <nav class="nav">
       <a class="navlink" href="#experience">Experience</a>
+      <a class="navlink" href="#projects">Projects</a>
       <a class="navlink" href="#skills">Stack</a>
       <a class="navlink" href="#education">Education</a>
       <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle light/dark theme">🌙</button>
@@ -280,12 +318,22 @@
 
   <!-- HERO -->
   <header class="hero">
-    <span class="eyebrow reveal"><span class="dot"></span> Strategic Finance × AI Transformation</span>
+    <span class="eyebrow reveal"><span class="dot"></span> Finance Transformation × AI Operator</span>
     <h1 class="name reveal">David Bunn</h1>
     <p class="role reveal">
-      <b>Strategic Finance Leader</b> with 9+ years across corporate finance, audit, and digital transformation —
-      operating at the intersection of <b>financial rigor</b> and <b>AI-powered execution</b>.
+      I help investment and finance teams move faster — pairing the rigor of <b>corporate finance and audit</b>
+      with hands-on <b>AI engineering</b> to turn manual reporting into automated data products.
+      9+ years across strategic finance, FP&amp;A, and US GAAP audit; now building the AI workflows modern investment teams run on.
     </p>
+
+    <!-- WHAT I DO -->
+    <div class="caps reveal">
+      <div class="cap"><span class="cap-ic">⚡</span> Finance Transformation</div>
+      <div class="cap"><span class="cap-ic">🤖</span> AI Workflow Automation</div>
+      <div class="cap"><span class="cap-ic">📈</span> Executive Reporting</div>
+      <div class="cap"><span class="cap-ic">🧩</span> Data Products for Investment Teams</div>
+    </div>
+
     <div class="contact reveal">
       <a href="mailto:davibunn@gmail.com"><span class="ic">✉</span> davibunn@gmail.com</a>
       <a href="https://www.linkedin.com/in/davidkcbunn/" target="_blank" rel="noopener"><span class="ic" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span> LinkedIn</a>
@@ -383,10 +431,41 @@
     </article>
   </section>
 
+  <!-- SELECTED AI PROJECTS -->
+  <section id="projects">
+    <div class="sec-head reveal">
+      <span class="sec-num">02</span>
+      <h2>Selected AI Projects</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="proj-grid">
+      <article class="proj reveal">
+        <div class="proj-top"><h3>AI Resource Hub &amp; Reporting Automation</h3><span class="proj-impact">80% less manual work</span></div>
+        <p>Internal hub plus automated reporting workflows that pull, clean, and format capital-markets data on demand — replacing hours of manual extraction for the investment teams.</p>
+        <div class="chips"><span class="chip hl">Claude Code</span><span class="chip hl">Copilot Studio</span><span class="chip">Power Query</span></div>
+      </article>
+      <article class="proj reveal">
+        <div class="proj-top"><h3>Market Selection Tool</h3><span class="proj-impact">Zero-to-one diligence</span></div>
+        <p>An LLM-driven tool that fuses macro-economic data into instant competitive assessments and strategic roadmaps, giving investment teams a fast read on new acquisition markets.</p>
+        <div class="chips"><span class="chip hl">LLMs</span><span class="chip">Macro Data</span><span class="chip">Python 3</span></div>
+      </article>
+      <article class="proj reveal">
+        <div class="proj-top"><h3>Asset Map Dashboard</h3><span class="proj-impact">Portfolio-wide visibility</span></div>
+        <p>A dynamic geospatial dashboard plotting every owned asset across markets — teams drill into asset-manager and tenant detail and resize market bubbles live by square footage, rent PSF, and more.</p>
+        <div class="chips"><span class="chip">Power BI (DAX)</span><span class="chip">Geospatial</span></div>
+      </article>
+      <article class="proj reveal">
+        <div class="proj-top"><h3>Acquisitions AI Program</h3><span class="proj-impact">Vendor &amp; stakeholder lead</span></div>
+        <p>Key contact coordinating 3rd-party vendors and internal business users across data cleansing and front-end app development for the firm's acquisitions AI initiative.</p>
+        <div class="chips"><span class="chip">Program Mgmt</span><span class="chip">Data Cleansing</span><span class="chip">Stakeholders</span></div>
+      </article>
+    </div>
+  </section>
+
   <!-- SKILLS -->
   <section id="skills">
     <div class="sec-head reveal">
-      <span class="sec-num">02</span>
+      <span class="sec-num">03</span>
       <h2>Technical Stack</h2>
       <span class="rule"></span>
     </div>
@@ -433,7 +512,7 @@
   <!-- EDUCATION -->
   <section id="education">
     <div class="sec-head reveal">
-      <span class="sec-num">03</span>
+      <span class="sec-num">04</span>
       <h2>Education &amp; Certifications</h2>
       <span class="rule"></span>
     </div>
